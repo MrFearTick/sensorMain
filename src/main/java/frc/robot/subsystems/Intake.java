@@ -12,7 +12,7 @@ public class Intake extends SubsystemBase {
   // Variables //
 
   public TalonFX motorIntake1;
-  public static DigitalInput sensorIntake1 = new DigitalInput(1);
+  public DigitalInput sensorIntake1 = new DigitalInput(1);
 
   // Functions //
 

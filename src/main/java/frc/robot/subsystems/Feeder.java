@@ -12,7 +12,7 @@ public class Feeder extends SubsystemBase {
   // Variables //
 
   public TalonFX motorFeeder1;
-  public static DigitalInput sensorFeeder1 = new DigitalInput(2);
+  public DigitalInput sensorFeeder1 = new DigitalInput(2);
 
   // Functions //
 

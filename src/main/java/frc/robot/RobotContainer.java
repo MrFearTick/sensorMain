@@ -1,9 +1,8 @@
 // Main
-// Version1
+// Version 1.1
 
 package frc.robot;
 
-import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.PS5Controller;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
@@ -19,10 +18,7 @@ public class RobotContainer {
   PS5Controller ps5 = new PS5Controller(0);
 
   Feeder motorFeeder = new Feeder();
-  DigitalInput sensorFeeder = Feeder.sensorFeeder1;
-
   Intake motorIntake = new Intake();
-  DigitalInput sensorIntake = Intake.sensorIntake1;
 
   // Functions // 
 
@@ -31,7 +27,7 @@ public class RobotContainer {
   }
 
   private void configureBindings() {
-    new JoystickButton(ps5, 1).whileTrue(new runSensor(motorFeeder, sensorFeeder, 0.7, motorIntake, sensorIntake, 1));
-    new JoystickButton(ps5, 2).whileTrue(new runSensor(motorFeeder, sensorFeeder, -0.7, motorIntake, sensorIntake, -1));
+    new JoystickButton(ps5, 1).whileTrue(new runSensor(motorFeeder, 0.7, motorIntake, 1));
+    new JoystickButton(ps5, 2).whileTrue(new runSensor(motorFeeder, -0.7, motorIntake, -1));
   }
 }
